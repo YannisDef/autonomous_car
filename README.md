@@ -2,9 +2,9 @@
 
 ## Résumé
 
-Dans le projet que nous avons confectionné, l'environnement de "highway_env" n'est pas parfait. Pour refaire les mêmes expériences que nous, vous devez modifier un fichier pour que l'agent puisse de pas forcement avancer.
+Dans le projet que nous avons confectionné, l'environnement de "highway_env" n'est pas parfait. Pour refaire les mêmes expériences que nous, vous devez modifier un fichier pour que l'agent puisse de pas forcément avancer.
 
-Actuellement, la vitesse de l'agent est comprise entre 20 et 30 unités. Si l'agent est devant un bouchon est qu'il ne peut empreinter aucune voie, il faut que celui-ci s'arrete. Sans cette modification, ca sera impossible pour lui.
+Actuellement, la vitesse de l'agent est comprise entre 20 et 30 unités. Si l'agent est devant un bouchon est qu'il ne peut emprunter aucune voie, il faut que celui-ci s'arrête. Sans cette modification, ca sera impossible pour lui.
 
 ### 0 - Cloner le repo
 Tout d'abord il faudra cloner le repo.
@@ -19,10 +19,10 @@ pip install highway-env
 ```
 
 ### 2 - Configuration de l'environnement
-Voici ce qu'il faut faire dans le fichier ou vous voulez refaire l'expérience.
+Voici ce qu'il faut faire dans le fichier où vous voulez refaire l'expérience.
 
 #### 2.a Outils de setup
-Ces lignes sont a simplement copier coller. Vous pouvez modifier les variables de speed pour lui donner une limite de vitesse minimal et maximal.
+Ces lignes sont à simplement copier coller. Vous pouvez modifier les variables de speed pour lui donner une limite de vitesse minimale et maximale.
 ```
 import gymnasium as gym
 from stable_baselines3 import DQN
@@ -58,13 +58,13 @@ Le premier est le path jusqu'au fichier "controller.py" dans le repo actuel que 
 source_file = 'YOUR/PATH/autonomous_car/controller.py'
 ```
 
-Le second path correspond à celui du fichier "controller.py" dans "highway_env" que vous avez installé dans les étapes précedentes.
+Le second path correspond à celui du fichier "controller.py" dans "highway_env" que vous avez installé dans les étapes précédentes.
 ```
 destination_file = 'YOUR/PATH/highway_env/vehicle/controller.py'
 ```
 
 #### 2.c Overwrite le fichier de base par le votre
-Une fois cela fait, vous devez appeler cette fonction, implémenté juste au dessus pour overwrite le fichier de la lib par le votre pour pouvoir modifier les vitesses de l'agent.
+Une fois cela fait, vous devez appeler cette fonction, implémenté juste au-dessus pour overwrite le fichier de la lib par le vôtre pour pouvoir modifier les vitesses de l'agent.
 ```
 overwrite_lib(source_file, destination_file)
 ```
