@@ -9,7 +9,7 @@ Actuellement, la vitesse de l'agent est comprise entre 20 et 30 unités. Si l'ag
 ### 0 - Cloner le repo
 Tout d'abord il faudra cloner le repo.
 ```
-git@github.com:YannisDef/autonomous_car.git
+git clone git@github.com:YannisDef/autonomous_car.git
 ```
 
 ### 1 - Installer highway_env
