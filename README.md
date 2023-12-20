@@ -69,7 +69,7 @@ Une fois cela fait vous devez appeler cette fonction, implémenté juste au-dess
 overwrite_lib(source_file, destination_file)
 ```
 
-#### 3 Tester
+### 3 - Tester
 Voici un exemple de code pour tester le modele donné en exemple.
 ```
 import gymnasium as gym
@@ -99,7 +99,7 @@ while True:
     env.render()
 ```
 
-#### 4 Développer
+### 4 - Développer
 Si vous voulez développer votre propre IA, rien ne vous empeche d'utiliser la fonction "run_and_save_agent" pour entrainer et enregistrer votre agent.
 ```
 def run_and_save_agent(
