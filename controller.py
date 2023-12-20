@@ -7,8 +7,8 @@ from highway_env.road.road import Road, LaneIndex, Route
 from highway_env.utils import Vector
 from highway_env.vehicle.kinematics import Vehicle
 
+#! You need to import your filename if you want to do something else
 from test import speed, speed_list
-# import test
 
 class ControlledVehicle(Vehicle):
     """
