@@ -76,35 +76,6 @@ f_statistic, p_value = stats.f_oneway(r2, s2, a2)
 print("F-statistique:", f_statistic)
 print("P-valeur:", p_value)
 
-def proportion(array1, array2):
-    a = np.sum(array1)
-    b = np.sum(array2)
-    count = np.array([a,b])
-    nobs = np.array([np.size(array1), np.size(array2)])
-
-    # Test Z pour deux proportions
-    _, p_value = proportions_ztest(count, nobs)
-    return p_value
-
-proportion(a1, a3)
-proportion(a1, a2)
-
-# # Perform an independent t-test
-# t_stat, p_value = stats.ttest_ind(r1, r2)
-# print(p_value)
-
-# t_stat, p_value = stats.ttest_ind(s1, s2)
-# print(p_value)
-
-# t_stat, p_value = stats.ttest_ind(a1, a2)
-# print(p_value)
-
-# # Perform an independent t-test
-# t_stat, p_value = stats.ttest_ind(r2, r3)
-# print(p_value)
-
-# t_stat, p_value = stats.ttest_ind(s2, s3)
-# print(p_value)
-
-# t_stat, p_value = stats.ttest_ind(a2, a3)
-# print(p_value)
+table = np.array([[21, 79], [8, 92]])
+res = chi2_contingency(table)
+print(res)
